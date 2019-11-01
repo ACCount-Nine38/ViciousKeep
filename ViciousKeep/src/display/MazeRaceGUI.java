@@ -62,19 +62,19 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 	private final ImageIcon DARK = new ImageIcon("images/black square.png");
 	private final ImageIcon OUT_OF_BOUNDS = new ImageIcon("images/path.png");
 	private final ImageIcon PATH = new ImageIcon("images/path.png");
-	private final ImageIcon SPIKE_TRAP = new ImageIcon("images/spikeTrap.png");
-	private final ImageIcon EXPLOSION_TRAP = new ImageIcon("images/explosionTrap.png");
+	private final ImageIcon SPIKE_TRAP = new ImageIcon("images/spike trap.png");
+	private final ImageIcon EXPLOSION_TRAP = new ImageIcon("images/explosion trap.png");
 	private final ImageIcon HAMMER = new ImageIcon("images/hammer.png");
-	private final ImageIcon SPIKE_BALL_TRAP = new ImageIcon("images/spikeBall.png");
+	private final ImageIcon SPIKE_BALL_TRAP = new ImageIcon("images/spikeball.png");
 	private final ImageIcon ROCK = new ImageIcon("images/rock.png");
 	private final ImageIcon TREASURE = new ImageIcon("images/treasure.png");
-	private final ImageIcon VAULT_DOOR = new ImageIcon("images/vaultDoor.png");
+	private final ImageIcon VAULT_DOOR = new ImageIcon("images/vault door.png");
 
 	// player images for the game objects that does not change
-	private final ImageIcon playerLeft = new ImageIcon("images/playerLeft.png");
-	private final ImageIcon playerRight = new ImageIcon("images/playerRight.png");
-	private final ImageIcon playerUp = new ImageIcon("images/playerTop.png");
-	private final ImageIcon playerDown = new ImageIcon("images/playerDown.png");
+	private final ImageIcon playerLeft = new ImageIcon("images/player left.png");
+	private final ImageIcon playerRight = new ImageIcon("images/player right.png");
+	private final ImageIcon playerUp = new ImageIcon("images/player top.png");
+	private final ImageIcon playerDown = new ImageIcon("images/player down.png");
 
 	// JComponents for the game
 	private JPanel scoreboardPanel = new JPanel(null);
@@ -90,7 +90,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 	private JLabel treasureIcon = new JLabel(TREASURE);
 	private JButton hammerButton = new JButton(HAMMER);
 	private JButton campFireButton = new JButton(
-			new ImageIcon(new ImageIcon("images/campFireIcon.png").getImage().getScaledInstance(25, 25, 0)));
+			new ImageIcon(new ImageIcon("images/camp fire icon.png").getImage().getScaledInstance(25, 25, 0)));
 	private JButton visionButton = new JButton(
 			new ImageIcon(new ImageIcon("images/eye.png").getImage().getScaledInstance(25, 25, 0)));
 
@@ -125,7 +125,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 	// objects that will be keep tracked of in the game
 	private SpikeBallTrap[] spikeBallTrapList = new SpikeBallTrap[NUM_SPIKE_BALL_TRAP];
 	private VaultDoor vaultDoor = new VaultDoor();
-	private Player player = new Player("images/playerDown.png");
+	private Player player = new Player("images/player down.png");
 
 	// a menu object for reference
 	private MenuGUI menu;
@@ -269,7 +269,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 					AudioPlayer.playAudio("sounds/select.wav");
 
 				MusicPlayer.stopMusic();
-				MusicPlayer.playMusic("sounds/introMusic.wav");
+				MusicPlayer.playMusic("sounds/intro-music.wav");
 
 				// go to the menu screen
 				menu.setVisible(true);
@@ -703,7 +703,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 				hammerLabel.setText("x " + numHammer + ",$5");
 				
 				if (audioPlaying)
-					AudioPlayer.playAudio("sounds/gearUp.wav");
+					AudioPlayer.playAudio("sounds/gear-up.wav");
 
 			} else {
 
@@ -896,7 +896,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 				
 				// play the sound effect of breaking the wall
 				if (audioPlaying)
-					AudioPlayer.playAudio("sounds/wallSmash.wav");
+					AudioPlayer.playAudio("sounds/wall-smash.wav");
 
 			} else if (key.getKeyCode() == KeyEvent.VK_DOWN
 					&& maze[player.getRow() + 1][player.getCol() - 0].getIcon() == WALL) {
@@ -907,7 +907,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 				hammerLabel.setText("x " + Integer.toString(numHammer) + ",$5");
 				
 				if (audioPlaying)
-					AudioPlayer.playAudio("sounds/wallSmash.wav");
+					AudioPlayer.playAudio("sounds/wall-smash.wav");
 
 			} else if (key.getKeyCode() == KeyEvent.VK_LEFT
 					&& maze[player.getRow() + 0][player.getCol() - 1].getIcon() == WALL) {
@@ -918,7 +918,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 				hammerLabel.setText("x " + Integer.toString(numHammer) + ",$5");
 				
 				if (audioPlaying)
-					AudioPlayer.playAudio("sounds/wallSmash.wav");
+					AudioPlayer.playAudio("sounds/wall-smash.wav");
 
 			} else if (key.getKeyCode() == KeyEvent.VK_RIGHT
 					&& maze[player.getRow() + 0][player.getCol() + 1].getIcon() == WALL) {
@@ -929,7 +929,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 				hammerLabel.setText("x " + Integer.toString(numHammer) + ",$5");
 				
 				if (audioPlaying)
-					AudioPlayer.playAudio("sounds/wallSmash.wav");
+					AudioPlayer.playAudio("sounds/wall-smash.wav");
 
 			}
 
@@ -984,7 +984,7 @@ public class MazeRaceGUI extends JFrame implements KeyListener, ActionListener {
 
 			// play sound effect for this collision
 			if (audioPlaying)
-				AudioPlayer.playAudio("sounds/spikeTrap.wav");
+				AudioPlayer.playAudio("sounds/spike-trap.wav");
 
 			// ends the game
 			gameOver("Spike", player.getRow(), player.getCol(), false);

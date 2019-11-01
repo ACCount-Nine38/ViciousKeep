@@ -29,10 +29,10 @@ public class FinishGUI extends JFrame implements ActionListener {
 	private JLabel swordLabel = new JLabel(
 			new ImageIcon(new ImageIcon("images/sword.png").getImage().getScaledInstance(197, 768, 0)));
 	private JLabel scoreLabel = new JLabel();
-	private JLabel winLabel = new JLabel(new ImageIcon("images/Success.png"));
-	private JLabel failLabel = new JLabel(new ImageIcon("images/Failure.png"));
+	private JLabel winLabel = new JLabel(new ImageIcon("images/success.png"));
+	private JLabel failLabel = new JLabel(new ImageIcon("images/failure.png"));
 	private JButton returnButton = new JButton(new ImageIcon(
-			new ImageIcon("images/backBtn.png").getImage().getScaledInstance(393 / 2 - 35, 170 / 2 - 20, 0)));
+			new ImageIcon("images/back btn.png").getImage().getScaledInstance(393 / 2 - 35, 170 / 2 - 20, 0)));
 
 	// required variables for this frame
 	private int points;
@@ -109,7 +109,7 @@ public class FinishGUI extends JFrame implements ActionListener {
 			AudioPlayer.playAudio("sounds/select.wav");
 			
 			MusicPlayer.stopMusic();
-			MusicPlayer.playMusic("sounds/introMusic.wav");
+			MusicPlayer.playMusic("sounds/intro-music.wav");
 
 			// returns to the menu
 			game.getMenu().setVisible(true);

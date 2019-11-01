@@ -34,15 +34,15 @@ public class MenuGUI extends JFrame implements ActionListener {
 	// Required JComponents for the frame
 	private JPanel menuPanel = new JPanel(null);
 	private JLabel nameLabel = new JLabel(new ImageIcon(new ImageIcon
-			("images/gameTitle.png").getImage().getScaledInstance(491+35, 84+20, 0)));
+			("images/game title.png").getImage().getScaledInstance(491+35, 84+20, 0)));
 	private JLabel swordLabel = new JLabel(new ImageIcon(new ImageIcon
 			("images/sword.png").getImage().getScaledInstance(197, 768, 0)));
 	private JButton startButton = new JButton(new ImageIcon(new ImageIcon
-			("images/playBtn.jpg").getImage().getScaledInstance(393/2, 170/2, 0)));
+			("images/play btn.jpg").getImage().getScaledInstance(393/2, 170/2, 0)));
 	private JButton scoreButton = new JButton(new ImageIcon(new ImageIcon
-			("images/scoreBtn.jpg").getImage().getScaledInstance(393/2, 170/2, 0)));
+			("images/score btn.jpg").getImage().getScaledInstance(393/2, 170/2, 0)));
 	private JButton quitButton = new JButton(new ImageIcon(new ImageIcon
-			("images/quitBtn.jpg").getImage().getScaledInstance(393/2, 170/2, 0)));
+			("images/quit btn.jpg").getImage().getScaledInstance(393/2, 170/2, 0)));
 
 	// create a high score array size 11 to store the top scores
 	public int[] topScore = new int[11];
@@ -198,7 +198,7 @@ public class MenuGUI extends JFrame implements ActionListener {
 	public void playBackgroundAudio() {
 
 		// plays the selected music using the music player
-		MusicPlayer.playMusic("sounds/introMusic.wav");
+		MusicPlayer.playMusic("sounds/intro-music.wav");
 
 	}
 

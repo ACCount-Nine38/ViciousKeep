@@ -41,7 +41,7 @@ public class AudioPlayer {
 		} catch (Exception ex) {
 
 			// if music file is not found, print it
-			System.out.println("music file is not found");
+			ex.printStackTrace();
 
 		}
 

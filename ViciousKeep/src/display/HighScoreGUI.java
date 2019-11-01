@@ -29,7 +29,7 @@ public class HighScoreGUI extends JFrame implements ActionListener {
 	// required JComponents for this frame
 	private JPanel scorePanel = new JPanel();
 	private JButton returnButton = new JButton(new ImageIcon(
-			new ImageIcon("images/backBtn.png").getImage().getScaledInstance(393 / 2 - 35, 170 / 2 - 20, 0)));
+			new ImageIcon("images/back btn.png").getImage().getScaledInstance(393 / 2 - 35, 170 / 2 - 20, 0)));
 	private JLabel[] scoreLabels = new JLabel[10];;
 	private JLabel sword1Label = new JLabel(
 			new ImageIcon(new ImageIcon("images/sword.png").getImage().getScaledInstance(197, 768, 0)));
@@ -102,7 +102,7 @@ public class HighScoreGUI extends JFrame implements ActionListener {
 
 			// returns to the menu
 			menu.setVisible(true);
-			MusicPlayer.playMusic("sounds/introMusic.wav");
+			MusicPlayer.playMusic("sounds/intro-music.wav");
 
 			// destroys this frame
 			this.dispose();

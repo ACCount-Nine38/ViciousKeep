@@ -13,7 +13,7 @@ public class VaultDoor extends Cell {
 	// constructor of the vault door class sets the vault door icon
 	public VaultDoor() {
 
-		setIcon(new ImageIcon("images/vaultDoor.png"));
+		setIcon(new ImageIcon("images/vault door.png"));
 		
 	}
 
